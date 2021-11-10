@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/RoselynnTest.unity
+    guid: 202452bb72e21894eb89cf430dc96f1e
+  - enabled: 1
+    path: Assets/Scenes/AR_Test.unity
+    guid: a5af9156fd9972340838c49e10519c5d
   m_configObjects: {}
