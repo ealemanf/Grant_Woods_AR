@@ -9,7 +9,12 @@ public class Mural_Effects : MonoBehaviour
 {
 
     // setting up the visual effects for murals
-    
+    public GameObject theInstructions;
+    public TextMeshProUGUI displayText; // display text for the instructions
+    public GameObject ImReadyButton;
+    public GameObject NextButtonActual;
+    public string[] instructionLines;
+    private int currentInstruction = 0;
     public GameObject TheParticleSystem;
     public GameObject DialogueBox;
     public GameObject ContinueButton;
@@ -34,6 +39,9 @@ public class Mural_Effects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        theInstructions.SetActive(true);
+        displayText.text = instructionLines[currentInstruction];
+        NextButtonActual.SetActive(true);
         InitiatePanel.SetActive(true);
         DecisionPanel.SetActive(false);
         DialogueBox.SetActive(false);
@@ -60,6 +68,23 @@ public class Mural_Effects : MonoBehaviour
             ContinueButton.SetActive(false);
             StartCoroutine(BuilderDecisionPopUp());
         }
+    }
+
+    public void NextButton()
+    {
+        currentInstruction++;
+
+        //check it at the end of the array
+        if (currentInstruction > instructionLines.Length - 2)
+        {
+            ImReadyButton.SetActive(true);
+            NextButtonActual.SetActive(false);
+        }
+        displayText.text = instructionLines[currentInstruction];
+    }
+    public void ImReadyButtonContinue()
+    {
+        theInstructions.SetActive(false);
     }
 
     public void Initiate()
