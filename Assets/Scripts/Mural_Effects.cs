@@ -42,7 +42,7 @@ public class Mural_Effects : MonoBehaviour
         theInstructions.SetActive(true);
         displayText.text = instructionLines[currentInstruction];
         NextButtonActual.SetActive(true);
-        InitiatePanel.SetActive(true);
+        InitiatePanel.SetActive(false);
         DecisionPanel.SetActive(false);
         DialogueBox.SetActive(false);
         BuilderDecisionsPanel.SetActive(false);
@@ -84,7 +84,9 @@ public class Mural_Effects : MonoBehaviour
     }
     public void ImReadyButtonContinue()
     {
+        InitiatePanel.SetActive(true);
         theInstructions.SetActive(false);
+        
     }
 
     public void Initiate()
