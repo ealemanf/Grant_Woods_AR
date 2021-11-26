@@ -7,7 +7,9 @@ using Vuforia;
 using TMPro;
 public class Mural_Effects : MonoBehaviour
 {
-
+    // audio stuff
+    public AudioSource womanVoice;
+    public AudioSource clickSoundSource;
     // setting up the visual effects for murals
     public GameObject theInstructions;
     public TextMeshProUGUI displayText; // display text for the instructions
@@ -121,6 +123,7 @@ public class Mural_Effects : MonoBehaviour
     {
         InitiatePanel.SetActive(false);
         TheParticleSystem.SetActive(false);
+        womanVoice.Play();
         DialogueBox.SetActive(true);
         StartCoroutine(TypeLine());
 
