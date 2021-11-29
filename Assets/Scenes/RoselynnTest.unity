@@ -385,7 +385,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.8207547, g: 0.74643105, b: 0.28184405, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1180,6 +1180,13 @@ MonoBehaviour:
     into the Great Depression
   - What you don't know is that these walls whisper and talk to each other during
     the cold Iowan nights. Today, you will have the chance to listen to their stories.
+  - 'You will meet:'
+  - 1) A woman near the library cafe where an Abraham Lincoln-like fellow is chopping
+    trees.
+  - 2) A man residing on the second floor stairwell. He holds a brass device and
+    wears a hat, and stands in front of blueprints.
+  - 3) Future scientists, engineers, and students working together un the upper central
+    lobby. A Grant Wood-inspired mural.
 --- !u!4 &2145517440
 Transform:
   m_ObjectHideFlags: 0
