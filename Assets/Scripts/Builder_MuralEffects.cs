@@ -31,12 +31,17 @@ public class Builder_MuralEffects : MonoBehaviour
 
     public GameObject InitiatePanel;
     public GameObject DecisionPanel;
-    public GameObject BuilderDecisionsPanel;
-    public GameObject NoiseDecisionPanel;
+    public GameObject DecisionPanel2; // formerly builder decision
+    public GameObject DecisionPanel3; // formerly noise decision
 
     public float textSpeed;
     public int index = 0;
     public float decisionTime;
+
+    public bool closeInstructionsBool = false;
+    public bool decisionBool01 = false; // decision panel 1
+    public bool decisionBool02 = false; // decision panel 2
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,18 +51,36 @@ public class Builder_MuralEffects : MonoBehaviour
         InitiatePanel.SetActive(false);
         DecisionPanel.SetActive(false);
         DialogueBox.SetActive(false);
-        BuilderDecisionsPanel.SetActive(false);
+        DecisionPanel2.SetActive(false);
         TheParticleSystem.SetActive(true);
         ContinueButton.SetActive(false);
         ContinueNextSceneButton.SetActive(false);
-        NoiseDecisionPanel.SetActive(false);
+        DecisionPanel3.SetActive(false);
         textComponent.text = string.Empty;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (textComponent.text == lines[index]) // advances the text lines
+        {
+            ContinueButton.SetActive(true);
+        }
+        if (textComponent.text == lines[1] && decisionBool01 == false)
+        {
+            ContinueButton.SetActive(false);
+            StartCoroutine(DecisionPopUp());
+        }
+        if (textComponent.text == lines[5] && decisionBool02 == false)
+        {
+            ContinueButton.SetActive(false);
+            StartCoroutine(DecisionPopUp2());
+        }
+        if (textComponent.text == lines[19])
+        {
+            ContinueButton.SetActive(false);
+            ContinueNextSceneButton.SetActive(true);
+}
     }
 
     public void NextButton()
@@ -114,5 +137,67 @@ public class Builder_MuralEffects : MonoBehaviour
         DialogueBox.SetActive(true);
         StartCoroutine(TypeLine());
 
+    }
+
+    public void TellBuilder()
+    {
+        decisionBool01 = true;
+        DecisionPanel.SetActive(false);
+        ContinueButton.SetActive(false);
+        if (index < lines.Length - 1 && decisionBool01 == true)
+        {
+            index = 2;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+        }
+    }
+
+    public void WhatYouDo4Living() 
+    // same as "so the problem will be solved very soon"
+    {
+        decisionBool01 = true;
+        decisionBool02 = true;
+        DecisionPanel.SetActive(false);
+        DecisionPanel2.SetActive(false);
+        ContinueButton.SetActive(false);
+        if (index < lines.Length - 1 && decisionBool01 == true)
+        {
+            index = 11;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+        }
+    }
+
+    public void WhyUnemployed()
+    {
+        decisionBool02 = true;
+        DecisionPanel2.SetActive(false);
+        ContinueButton.SetActive(false);
+        if (index < lines.Length - 1 && decisionBool01 == true)
+        {
+            index = 6;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+        }
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    IEnumerator DecisionPopUp() // first decision
+    {
+        ContinueButton.SetActive(false);
+        DecisionPanel.SetActive(true);
+        decisionBool01 = true;
+        yield return new WaitForSeconds(decisionTime);
+    }
+
+    IEnumerator DecisionPopUp2()
+    {
+        ContinueButton.SetActive(false);
+        DecisionPanel2.SetActive(true);
+        decisionBool02 = true;
+        yield return new WaitForSeconds(decisionTime);
     }
 }

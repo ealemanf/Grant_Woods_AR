@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BuilderScene.unity
     guid: 8b24de1d1335ba142b5a6717a3e88603
+  - enabled: 1
+    path: Assets/Scenes/UnlimitedPoss.unity
+    guid: fa8f14297a99bad4e88815a6eefdb1e6
+  - enabled: 1
+    path: Assets/Scenes/FinalEnding.unity
+    guid: 69e03dcaf3e64ce40b7206ac80ea4957
   m_configObjects: {}
