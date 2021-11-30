@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7690769, g: 0.62498355, b: 0.4552214, a: 1}
+  m_IndirectSpecularColor: {r: 0.7690769, g: 0.6249836, b: 0.4552214, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1081,9 +1081,8 @@ MonoBehaviour:
     areas of knowledge.
   - 'The paintings were then executed with the help of local Iowan painters, who
     were chosen by Wood. '
-  - The Library Murals are a perfect representation of the style, honoring the value
-    of work and the American Midwest at a time when the country was falling deeper
-    into the Great Depression
+  - The Library Murals are a perfeThe murals represent the American Midwest at a
+    time when the country was falling deeper into the Great Depression
   - What you don't know is that these walls whisper and talk to each other during
     the cold Iowan nights. Today, you will listen to their stories.
   - 'You will meet:'
