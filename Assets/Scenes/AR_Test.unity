@@ -7750,8 +7750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.351074, y: 29.006393}
-  m_SizeDelta: {x: -136.3297, y: -34.8076}
+  m_AnchoredPosition: {x: 4.351074, y: 13.205097}
+  m_SizeDelta: {x: -136.3297, y: -66.410194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142479631
 MonoBehaviour:
@@ -7982,7 +7982,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I'm not sure how to find the builder
+  m_text: I'm not sure how to find the builder.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d472ed7ef2593ba47b9030ac627b9d77, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8810,7 +8810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yes, I will find the builder
+  m_text: Yes, I will find the builder.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d472ed7ef2593ba47b9030ac627b9d77, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
