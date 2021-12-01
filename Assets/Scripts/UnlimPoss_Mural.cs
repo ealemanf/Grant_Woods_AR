@@ -59,7 +59,7 @@ public class UnlimPoss_Mural : MonoBehaviour
         {
             ContinueButton.SetActive(true);
         }
-        if (textComponent.text == lines[6])
+        if (textComponent.text == lines[5])
         {
             ContinueButton.SetActive(false);
         }

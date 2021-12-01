@@ -9,7 +9,8 @@ public class Mural_Effects : MonoBehaviour
 {
     // audio stuff
     public AudioSource womanVoice;
-    public AudioSource clickSoundSource;
+    //public AudioSource thatNoiseSource;
+    public GameObject thatNoiseSource;
     // setting up the visual effects for murals
     public GameObject theInstructions;
     public TextMeshProUGUI displayText; // display text for the instructions
@@ -55,6 +56,7 @@ public class Mural_Effects : MonoBehaviour
         ContinueNextSceneButton.SetActive(false);
         NoiseDecisionPanel.SetActive(false);
         HowCanButtonLiving.SetActive(false);
+        thatNoiseSource.SetActive(false);
         textComponent.text = string.Empty;
     }
 
@@ -89,6 +91,10 @@ public class Mural_Effects : MonoBehaviour
         {
             ContinueButton.SetActive(false);
             HowCanButtonLiving.SetActive(true);
+        }
+        if (textComponent.text == lines[9])
+        {
+            thatNoiseSource.SetActive(true);
         }
     }
 
@@ -255,6 +261,7 @@ public class Mural_Effects : MonoBehaviour
     public void WhatDoYouLiving()
     {
         DecisionPanel.SetActive(false);
+        NoiseDecisionPanel.SetActive(false);
         ContinueButton.SetActive(false);
         //ContinueButton.SetActive(true);
         if (index < lines.Length - 1 && decisionBool01 == true)
